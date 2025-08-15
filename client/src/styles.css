@@ -1,0 +1,128 @@
+* {
+  font-family: Inter, Verdana, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-height: 100vh;
+  overflow: hidden; /* This line disables scrolling on body */
+}
+
+body {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    linear-gradient(to right, #000, #436ebd, indigo, #000);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* full viewport height */
+}
+
+/* Styling for the left column */
+.left-column {
+  position: sticky;
+  top : 0;
+  flex: 0.23;  /* Adjust this value as needed */
+}
+
+/* Styling fthat creates the black border between the columns */
+.left-column:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px; /* Adjust as per your desired border thickness */
+  bottom: 0;
+  width: 20px; /* Adjust as per your desired border thickness */
+  background: linear-gradient(to right, transparent, black, transparent);
+}
+
+/* Styling for the right column */
+.right-column {
+  display: flex;
+  overflow-y: auto; 
+  flex: 0.77;  
+  padding-left: 20px; 
+  align-items: center;
+
+  flex-direction: column;
+}
+
+/* Styling for the right column's children */
+.right-column > div {
+  max-width: 80%; /* or adjust as needed */
+  width: 100%;
+}
+
+/*nav bar styling at top of site*/
+.nav {
+  color: white;
+  background-color: #15171c;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: .8vh 1rem;
+}
+
+.nav .welcomeMessage {
+  flex: 1;
+  text-align: center;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.welcome-message {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+
+}
+
+/*container around the audio player*/
+.container {
+  margin-top: .2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*select model drop down*/
+.select-models {
+  font-size: 20px;
+  color: white;
+  margin-top: 5vh;
+}
+
+/*container for the chosen models*/
+.chosen-models {
+  color: white;
+  margin-top: 5vh;
+  padding: 5px;
+  height: 200px; /* Adjust the height as necessary */
+  overflow: auto; /* For scrollbar if content exceeds box height */
+  margin-bottom: 20px; /* Add some space below this box */
+  font-size: 20px;
+}
+
+/* button for removing models */
+.remove-btn {
+  position: relative;
+  top: -10px;
+  right: -3px;
+}
+
+/*hides children of the container if variable is false*/
+.hidden {
+  display: none;
+}

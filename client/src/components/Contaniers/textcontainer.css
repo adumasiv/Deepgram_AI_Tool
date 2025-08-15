@@ -1,0 +1,9 @@
+.text_container {
+    border-bottom: 3px solid #000000;
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+    word-wrap: break-word;
+    color: #ffffff;
+    font-size: 1.1em;
+}
